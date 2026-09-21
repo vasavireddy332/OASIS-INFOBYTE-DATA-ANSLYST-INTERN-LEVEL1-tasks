@@ -1,7 +1,18 @@
-
 # 📊 Oasis Infobyte – Data Analyst Internship (Level 1 Tasks)
 
-A collection of four data analytics tasks completed during my **Data Analyst Internship at Oasis Infobyte**. The tasks cover exploratory data analysis, customer segmentation, data cleaning, and sentiment analysis, using Python in Jupyter Notebooks.
+A collection of four data analytics tasks completed during my **Data Analyst Internship at Oasis Infobyte**, covering exploratory data analysis, customer segmentation, data cleaning, and sentiment analysis using Python in Jupyter Notebooks.
+
+---
+
+## 📑 Table of Contents
+- [Repository Structure](#-repository-structure)
+- [Tools & Technologies](#️-tools--technologies)
+- [Task 1: Retail Sales EDA](#-task-1-retail-sales--exploratory-data-analysis-eda)
+- [Task 2: Customer Segmentation](#-task-2-customer-segmentation)
+- [Task 3: Data Cleaning](#-task-3-data-cleaning-titanic-dataset)
+- [Task 4: Sentiment Analysis](#-task-4-sentiment-analysis-on-product-reviews)
+- [Overall Learnings](#-overall-learnings)
+- [How to Run](#️-how-to-run)
 
 ---
 
@@ -23,7 +34,7 @@ A collection of four data analytics tasks completed during my **Data Analyst Int
 ## 🛠️ Tools & Technologies
 
 - **Language:** Python
-- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn *(add NLTK / TextBlob / VADER if used in Task 4)*
+- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn *(add NLTK / TextBlob / VADER if used)*
 - **Environment:** Jupyter Notebook / Google Colab
 - **Data formats:** Excel (.xls / .xlsx)
 
@@ -31,97 +42,118 @@ A collection of four data analytics tasks completed during my **Data Analyst Int
 
 ## ✅ Task 1: Retail Sales – Exploratory Data Analysis (EDA)
 
-**Objective:** Understand sales patterns in retail data and find the factors that drive revenue.
+**🎯 Objective:** Understand sales patterns in retail data and identify the factors that drive revenue.
 
-**Dataset:** `task-1 retail_sales.xls`
+**📂 Dataset:** `task-1 retail_sales.xls`
 
-**Approach:**
-1. Loaded the dataset and inspected its structure, data types, and summary statistics
-2. Checked for missing values and duplicates
-3. Analysed sales by category, product, and time period
-4. Visualised distributions and trends using charts
-5. Examined relationships between key variables
+### 🔧 What I Did
+- Loaded the dataset with Pandas and inspected its shape, columns, data types, and summary statistics
+- Checked for missing values and duplicate records, and cleaned them
+- Converted the date column to datetime and created time-based features (month, day, year)
+- Grouped and aggregated sales by category, product, and time period
+- Created visualisations (bar charts, line charts, histograms, heatmaps) to explore trends
 
-**Key Insights:**
-- 📈 Top-performing product category: **[fill]**, contributing **[fill]%** of total sales
-- 📅 Sales peak in **[fill: month / season]** and dip in **[fill]**
+### 🔍 What I Analysed
+- Which product categories generate the most revenue and units sold
+- How sales change over time (monthly / seasonal trends)
+- How customer attributes (age, gender, region) relate to spending
+- Correlations between numerical variables such as quantity, price, and total sales
+
+### 📈 Outcomes
+- 🏆 Top-performing category: **[fill]**, contributing **[fill]%** of total sales
+- 📅 Sales peaked in **[fill: month / season]** and dipped in **[fill]**
 - 🛒 Average transaction value: **[fill]**
-- 👥 Customer group with the highest spending: **[fill: age group / gender / region]**
-- 💡 Recommendation: **[fill: e.g., stock up before the peak period, promote low-performing categories]**
+- 👥 Highest-spending customer group: **[fill]**
+- 💡 **Recommendation:** [fill: e.g., increase stock before peak months, promote low-performing categories]
 
 ---
 
 ## ✅ Task 2: Customer Segmentation
 
-**Objective:** Group customers by purchasing behaviour so businesses can target them better.
+**🎯 Objective:** Group customers by purchasing behaviour so a business can target each group effectively.
 
-**Dataset:** `online_retail.xlsx`
+**📂 Dataset:** `online_retail.xlsx`
 
-**Approach:**
-1. Cleaned the data (removed missing customer IDs, cancelled orders, and negative quantities)
-2. Created customer-level features such as **Recency, Frequency, Monetary (RFM)**
-3. Scaled the features
-4. Applied a clustering method (e.g., K-Means) and chose the number of clusters
-5. Profiled and interpreted each segment
+### 🔧 What I Did
+- Loaded the transaction data and removed rows with missing customer IDs, cancelled orders, and negative quantities
+- Calculated a total price per transaction (Quantity × Unit Price)
+- Built customer-level features: **Recency, Frequency, and Monetary value (RFM)**
+- Scaled the features and applied a clustering algorithm (e.g., K-Means)
+- Chose the number of clusters (e.g., using the elbow method) and labelled each segment
 
-**Key Insights:**
+### 🔍 What I Analysed
+- How recently each customer purchased (Recency)
+- How often each customer buys (Frequency)
+- How much each customer spends (Monetary)
+- The average behaviour of each segment and its share of total revenue
+
+### 📈 Outcomes
 - 🔢 Customers were grouped into **[fill]** segments
-- 🌟 **High-value segment:** **[fill]%** of customers generate **[fill]%** of revenue
-- 🔁 **Loyal / frequent buyers:** **[fill: short description]**
-- ⚠️ **At-risk / inactive customers:** **[fill: short description]**
-- 💡 Recommendation: **[fill: e.g., reward the top segment, run win-back offers for inactive customers]**
+- 🌟 **High-value customers:** **[fill]%** of customers generate **[fill]%** of revenue
+- 🔁 **Loyal customers:** [fill: short description]
+- ⚠️ **At-risk / inactive customers:** [fill: short description]
+- 💡 **Recommendation:** [fill: e.g., reward the top segment, run win-back campaigns for inactive customers]
 
 ---
 
 ## ✅ Task 3: Data Cleaning (Titanic Dataset)
 
-**Objective:** Turn raw, messy data into a clean, analysis-ready dataset.
+**🎯 Objective:** Turn raw, messy data into a clean, analysis-ready dataset.
 
-**Output:** `task-3 titanic_cleaned.xls`
+**📂 Output:** `task-3 titanic_cleaned.xls`
 
-**Approach:**
-1. Inspected missing values, data types, and duplicates
-2. Handled missing values in columns such as **[fill: Age, Cabin, Embarked]** (imputation or removal)
-3. Removed duplicate records
-4. Corrected data types and standardised formats
-5. Checked for outliers and treated them where needed
-6. Exported the cleaned dataset
+### 🔧 What I Did
+- Inspected the dataset for missing values, wrong data types, and duplicates
+- Handled missing values in **[fill: Age, Cabin, Embarked]** using **[fill: mean / median / mode / dropping]**
+- Removed duplicate records and standardised inconsistent formats
+- Corrected data types and, where needed, dropped columns that added little value
+- Detected and treated outliers
+- Exported the final cleaned dataset
 
-**Key Insights:**
-- 🧹 Original shape: **[fill]** → Cleaned shape: **[fill]**
-- ❓ Column with the most missing values: **[fill]** (**[fill]%**), handled by **[fill: method]**
-- 🚢 Survival rate: **[fill]%** overall; higher among **[fill: females / first-class / children]**
-- 💡 Takeaway: Clean data leads to more reliable analysis, and the way missing values are handled directly affects the results
+### 🔍 What I Analysed
+- The number and percentage of missing values in each column
+- The distribution of key columns before and after cleaning
+- Survival patterns by gender, passenger class, and age group
+
+### 📈 Outcomes
+- 🧹 Shape before cleaning: **[fill]** → after cleaning: **[fill]**
+- ❓ Column with the most missing values: **[fill]** (**[fill]%**), handled by **[fill]**
+- 🚢 Overall survival rate: **[fill]%**, higher among **[fill: females / first class / children]**
+- 💡 **Takeaway:** Data cleaning decisions directly affect the reliability of any analysis built on top
 
 ---
 
 ## ✅ Task 4: Sentiment Analysis on Product Reviews
 
-**Objective:** Find out whether customer reviews are positive, negative, or neutral.
+**🎯 Objective:** Understand how customers feel about products by classifying reviews as positive, negative, or neutral.
 
-**Dataset:** `task-4 product_reviews.xls`
+**📂 Dataset:** `task-4 product_reviews.xls`
 
-**Approach:**
-1. Loaded and cleaned the review text (lowercasing, removing punctuation, stop words, etc.)
-2. Applied a sentiment analysis method to score each review
-3. Classified reviews as Positive, Negative, or Neutral
-4. Visualised the sentiment distribution
-5. Explored common words in positive vs. negative reviews
+### 🔧 What I Did
+- Loaded the reviews and cleaned the text (lowercasing, removing punctuation, numbers, and stop words)
+- Applied a sentiment analysis method (**[fill: TextBlob / VADER / other]**) to score each review
+- Classified each review as Positive, Negative, or Neutral
+- Visualised the sentiment distribution and generated word frequency views (e.g., word clouds)
 
-**Key Insights:**
+### 🔍 What I Analysed
+- The overall split of positive, negative, and neutral reviews
+- The most frequent words and themes in positive vs. negative reviews
+- How sentiment relates to ratings or products (if available in the data)
+
+### 📈 Outcomes
 - 😊 Positive: **[fill]%** | 😐 Neutral: **[fill]%** | 😞 Negative: **[fill]%**
-- 🔑 Most common words in positive reviews: **[fill]**
-- 🔻 Most common complaints in negative reviews: **[fill]**
-- 💡 Recommendation: **[fill: e.g., fix the most-cited product issues to improve ratings]**
+- 🔑 Common words in positive reviews: **[fill]**
+- 🔻 Common complaints in negative reviews: **[fill]**
+- 💡 **Recommendation:** [fill: e.g., address the most-cited product issues to improve customer satisfaction]
 
 ---
 
 ## 📌 Overall Learnings
 
-- Practised the full data workflow: **load → clean → explore → analyse → interpret**
-- Applied **EDA**, **clustering**, **data cleaning**, and **NLP** techniques on real datasets
-- Learned to turn raw data into **actionable business insights**
-- Strengthened skills in **Pandas, data visualisation, and storytelling with data**
+- Practised the complete data workflow: **load → clean → explore → analyse → interpret**
+- Applied **EDA**, **clustering**, **data cleaning**, and **NLP** techniques on real-world datasets
+- Learned to convert raw data into **actionable business insights**
+- Strengthened skills in **Pandas, data visualisation, and data storytelling**
 
 ---
 
